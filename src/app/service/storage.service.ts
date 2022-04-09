@@ -11,10 +11,10 @@ export class StorageService {
     new Quote(3, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Zambian',0, 0, new Date()),
     new Quote(4, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Rwandis',0, 0, new Date())
   ];
-getQoutes(){
+getQuotes(){
   return this.quotes
 }
-getQoute(id:number){
+getQuote(id:number){
   return this.quotes.find(quote=>quote.id===id)
 }
 addQuote(quote:Quote){
@@ -23,13 +23,15 @@ addQuote(quote:Quote){
   const new_quotes=[...this.quotes,quote];
   this.quotes=new_quotes
 }
-upVoteQoute(qoute:Quote){
-  qoute.upvotes++;
+upvoteQuote(quote:Quote){
+  quote.upvotes++;
 
 }
-downVotesQoute(quote:Quote){
+downVotesQuote(quote:Quote){
   quote.downvotes++;
 }
-
+deleteQuote( quote :Quote){
+  this.quotes.splice(this.quotes.indexOf(quote,1))
+}
   constructor() { }
 }

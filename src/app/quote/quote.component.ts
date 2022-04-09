@@ -18,7 +18,23 @@ export class QuoteComponent implements OnInit {
     this.getQuotes()
   }
   getQuotes(){
-    this.qoutes=[...this.storageService.getQoutes()]
+    this.qoutes=[...this.storageService.getQuotes()]
+  }
+  selectQuote(quote :Quote){
+    this.selectedQuote=quote;
+  }
+  upvoteQuote(quote: Quote){
+    this.storageService.upvoteQuote(quote);
+    this.getQuotes();
+  }
+  downVoteQuote(quote :Quote){
+    this.storageService.downVotesQuote(quote);
+    this.getQuotes();
+  }
+  deleteQuote(quote :Quote){
+    this.storageService.deleteQuote(quote);
+    this.selectedQuote= undefined;
+    this.getQuotes()
   }
 
 }
