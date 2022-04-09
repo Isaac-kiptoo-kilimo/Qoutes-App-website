@@ -1,1 +1,69 @@
 <app-navbar></app-navbar>
+<input type="hidden" #selection>
+
+<div class="container">
+  <div class="row my-4 position-relative">
+
+    <div class="col-4 px-1 px-md-4">
+      <h2 class="text-center">Quotes</h2>
+      <div class="quotes">
+
+        <div class="quote my-4 best-quot" *ngFor="let quote of quotes" (click)="selectQuote(quote)"
+          [ngClass]="{'active': selectedQuote === quote}">
+          <div class="badge">
+            <span class="badge-text">{{quote.id}}</span>
+          </div>
+          <div class="quote-description">
+            <!-- <a routerLink="quotes/{{quote.id}}"> -->
+            <p> {{quote.quote}} </p>
+            <!-- </a> -->
+          </div>
+          <div class="quote-author">
+            <p class="m-0 p-0">By {{quote.author}}</p>
+          </div>
+          <div class="tie">
+            Best Quote
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-8 px-md-5">
+      <div class="sticky-top pt-5">
+
+        <!-- <router-outlet></router-outlet> -->
+
+        <h2 class="text-center mb-4"> Quote Detail</h2>
+
+        <div class="selected-quote" *ngIf="selectedQuote">
+          <div class="selected-quote-description">
+            <p> {{selectedQuote.quote}} </p>
+          </div>
+          <div class="selected-quote-author">
+            <p class="m-0 p-0">By {{selectedQuote.author}}</p>
+          </div>
+          <div class="selected-quote-votes mt-3 d-flex align-items-center">
+            <button class="btn btn-primary shadow-none me-4" (click)="upvoteQuote(selectedQuote)">
+              UpVote: {{selectedQuote.upvotes}}
+            </button>
+            <button class="btn btn-secondary shadow-none me-4" (click)="downVoteQuote(selectedQuote)">
+              DownVote: {{selectedQuote.downvotes}}
+            </button>
+            <div class="ms-auto">
+              Created: <span class="text-muted">2 Days Ago</span>
+              <button class="btn btn-sm btn-danger ms-4 shadow-none"
+                (click)="deleteQuote(selectedQuote)">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="selected-quote text-center py-5" *ngIf="!selectedQuote">
+          <div class="selected-quote-description">
+            <h1> _<br>Select a quote to see <br> more details<br>_ </h1>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
