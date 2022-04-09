@@ -9,7 +9,7 @@ import { StorageService } from '../service/storage.service';
 })
 export class QuoteComponent implements OnInit {
 
-  qoutes : Quote []=[];
+  quotes : Quote []=[];
   selectedQuote: Quote | undefined;
 
   constructor(public storageService:StorageService ) {  }
@@ -18,7 +18,7 @@ export class QuoteComponent implements OnInit {
     this.getQuotes()
   }
   getQuotes(){
-    this.qoutes=[...this.storageService.getQuotes()]
+    this.quotes=[...this.storageService.getQuotes()]
   }
   selectQuote(quote :Quote){
     this.selectedQuote=quote;
