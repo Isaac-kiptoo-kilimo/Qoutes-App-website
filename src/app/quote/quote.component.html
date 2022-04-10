@@ -19,7 +19,10 @@
             <!-- </a> -->
           </div>
           <div class="quote-author">
-            <p class="m-0 p-0">By {{quote.author}}</p>
+            <p class="m-0 p-0">Author: {{quote.author}}</p>
+          </div>
+          <div class="quote-author">
+            <p class="m-0 p-0">-submited by: {{quote.submited_by}}</p>
           </div>
           <div class="tie">
             Best Quote
@@ -41,7 +44,10 @@
             <p> {{selectedQuote.quote}} </p>
           </div>
           <div class="selected-quote-author">
-            <p class="m-0 p-0">By {{selectedQuote.author}}</p>
+            <p class="m-0 p-0">--Author :{{selectedQuote.author}}</p>
+          </div>
+          <div class="selected-quote-author">
+            <p class="m-0 p-0">submitted by:{{selectedQuote.submited_by}}</p>
             <p class="m-0 p-0">
               <small>Created {{selectedQuote.created | date }}</small>
             </p>
