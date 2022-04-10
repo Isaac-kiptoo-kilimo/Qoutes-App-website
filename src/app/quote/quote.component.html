@@ -47,16 +47,16 @@
             </p>
           </div>
           <div class="selected-quote-votes mt-3 d-flex align-items-center">
-            <button class="btn btn-primary shadow-none me-4" (click)="upvoteQuote(selectedQuote)">
+            <button class="btn btn-primary shadow-none me-4" (click)="upvoteQuote(selectedQuote.id)">
               UpVote: {{selectedQuote.upvotes}}
             </button>
-            <button class="btn btn-secondary shadow-none me-4" (click)="downVoteQuote(selectedQuote)">
+            <button class="btn btn-secondary shadow-none me-4" (click)="downVoteQuote(selectedQuote.id)">
               DownVote: {{selectedQuote.downvotes}}
             </button>
             <div class="ms-auto">
               <small class="text-muted">Created: {{selectedQuote.created | timesince }} Days ago</small>
               <button class="btn btn-sm btn-danger ms-4 shadow-none"
-                (click)="deleteQuote(selectedQuote)">Delete</button>
+                (click)="deleteQuote(selectedQuote.id)">Delete</button>
             </div>
           </div>
         </div>

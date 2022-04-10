@@ -4,6 +4,7 @@ import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QouteDetailComponent } from './quote/qoute-detail/qoute-detail.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -18,7 +19,7 @@ const routes: Routes = [
   {
     path: 'add-quote',
     component: AddQuoteComponent,
-  }
+  },
   
 ];
 

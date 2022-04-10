@@ -10,6 +10,9 @@ import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
 import { QouteDetailComponent } from './quote/qoute-detail/qoute-detail.component';
 import { BestquoteDirective } from './directives/bestquote.directive';
 import { TimesincePipe } from './pipes/timesince.pipe';
+import { AuthComponent } from './auth/auth.component';
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { TimesincePipe } from './pipes/timesince.pipe';
     AddQuoteComponent,
     QouteDetailComponent,
     BestquoteDirective,
-    TimesincePipe
+    TimesincePipe,
+    AuthComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

@@ -23,18 +23,20 @@ export class QuoteComponent implements OnInit {
   selectQuote(quote :Quote){
     this.selectedQuote=quote;
   }
-  upvoteQuote(quote: Quote){
-    this.storageService.upvoteQuote(quote);
+  upvoteQuote(id:number){
+    this.storageService.upvoteQuote(id);
     this.getQuotes();
   }
-  downVoteQuote(quote :Quote){
-    this.storageService.downVotesQuote(quote);
+  downVoteQuote(id:number){
+    this.storageService.downVotesQuote(id);
     this.getQuotes();
   }
-  deleteQuote(quote :Quote){
-    this.storageService.deleteQuote(quote);
+  deleteQuote(id:number){
+    if(this.selectedQuote !== undefined){
+    this.storageService.deleteQuote(id || 1000);
     this.selectedQuote= undefined;
     this.getQuotes()
+    }
   }
 
 }
