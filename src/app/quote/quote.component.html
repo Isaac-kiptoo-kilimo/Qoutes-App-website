@@ -42,6 +42,9 @@
           </div>
           <div class="selected-quote-author">
             <p class="m-0 p-0">By {{selectedQuote.author}}</p>
+            <p class="m-0 p-0">
+              <small>Created {{selectedQuote.created | date }}</small>
+            </p>
           </div>
           <div class="selected-quote-votes mt-3 d-flex align-items-center">
             <button class="btn btn-primary shadow-none me-4" (click)="upvoteQuote(selectedQuote)">
@@ -51,7 +54,7 @@
               DownVote: {{selectedQuote.downvotes}}
             </button>
             <div class="ms-auto">
-              Created: <span class="text-muted">2 Days Ago</span>
+              <small class="text-muted">Created: {{selectedQuote.created | timesince }} Days ago</small>
               <button class="btn btn-sm btn-danger ms-4 shadow-none"
                 (click)="deleteQuote(selectedQuote)">Delete</button>
             </div>
