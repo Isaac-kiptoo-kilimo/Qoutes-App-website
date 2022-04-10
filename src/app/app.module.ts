@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
 import { QouteDetailComponent } from './quote/qoute-detail/qoute-detail.component';
 import { BestquoteDirective } from './directives/bestquote.directive';
+import { TimesincePipe } from './pipes/timesince.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BestquoteDirective } from './directives/bestquote.directive';
     NavbarComponent,
     AddQuoteComponent,
     QouteDetailComponent,
-    BestquoteDirective
+    BestquoteDirective,
+    TimesincePipe
   ],
   imports: [
     BrowserModule,
