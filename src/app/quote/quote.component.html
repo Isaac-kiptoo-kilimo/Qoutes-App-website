@@ -36,7 +36,7 @@
 
         <h2 class="text-center mb-4"> Quote Detail</h2>
 
-        <div class="selected-quote" *ngIf="selectedQuote">
+        <div class="selected-quote" *ngIf="selectedQuote!==undefined">
           <div class="selected-quote-description">
             <p> {{selectedQuote.quote}} </p>
           </div>
