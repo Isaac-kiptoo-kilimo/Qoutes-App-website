@@ -10,7 +10,7 @@ import { StorageService } from 'src/app/service/storage.service';
 })
 export class AddQuoteComponent implements OnInit {
 
-  quote: Quote= new Quote(1, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Nigerian',0, 0, new Date());
+  quote: Quote= new Quote(1, 'Bill Watterson', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Isaac Kiptoo',0, 0, new Date());
   title='npms'
 
   constructor( 

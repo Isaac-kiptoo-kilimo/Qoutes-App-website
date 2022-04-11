@@ -43,11 +43,9 @@
 
         <div class="selected-quote" *ngIf="selectedQuote!==undefined">
           <div class="selected-quote-description">
-            <p> {{selectedQuote.quote}} </p>
+            <p> {{selectedQuote.quote}} <span class="m-o p-0 selected-quote-author"> By - {{ selectedQuote.author}} </span> </p>
           </div>
-          <div class="selected-quote-author">
-            <p class="m-0 p-0">--Author :{{selectedQuote.author}}</p>
-          </div>
+         
           <div class="selected-quote-author">
             <p class="m-0 p-0">submitted by:{{selectedQuote.submited_by}}</p>
             <p class="m-0 p-0">
