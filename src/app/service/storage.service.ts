@@ -6,10 +6,10 @@ import { Quote } from '../model/quote';
 })
 export class StorageService {
   quotes: Quote[] =  [
-    new Quote(1, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Nigerian',0, 0, new Date(),false),
-    new Quote(2, 'Isaac Kiptanui', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Kenyan',0, 0, new Date(),false),
-    new Quote(3, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Zambian',0, 0, new Date(),false),
-    new Quote(4, 'Isaac Kiptoo', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Rwandis',0, 0, new Date(),false)
+    new Quote(1, 'Bill Watterson', '“The greatest glory in living lies not in never falling, but in rising every time we fall.“', 'Beatrice Johns',0, 0, new Date(),false),
+    new Quote(2, 'Bill Watterson',  '“You know, Hobbes, some days even my lucky rocketship underpants don\'t help.” ','Isaac Kiptoo',0, 0, new Date(),false),
+    new Quote(3, 'Stephen Chbosky', ' "Even if we don\'t have the power to choose where we come from, we can still choose where we go from there."', 'Alex Omondi',0, 0, new Date(),false),
+    new Quote(4, 'J.K. Rowling', '"It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default."', 'Hughes Mugera',0, 0, new Date(),false)
   ];
 getQuotes(){
   this.setBestQuote()
