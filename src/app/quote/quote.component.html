@@ -15,15 +15,17 @@
           </div>
           <div class="quote-description">
             <!-- <a routerLink="quotes/{{quote.id}}"> -->
-            <p> {{quote.quote}} </p>
+            <p> {{quote.quote}} <span class="m-o p-0 quote-author"> By - {{  quote.author}} </span> </p>
             <!-- </a> -->
           </div>
-          <div class="quote-author">
-            <p class="m-0 p-0">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Author: {{quote.author}}</p>
+          <div class="d-flex justify-content-between">
+            <p class="px-1 m-0 ">Upvotes: {{quote.upvotes}}</p>
+            <p class="p-0 m-0">Downvotes: {{quote.downvotes}}</p>
           </div>
           <div class="quote-author">
-            <p class="m-0 p-0">-submited by: {{quote.submited_by}}</p>
+            <p class="my-2 p-0">submited by: {{quote.submited_by}}</p>
           </div>
+          
           <div class="tie">
             Best Quote
           </div>
