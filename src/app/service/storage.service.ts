@@ -34,12 +34,12 @@ upvoteQuote(id:number){
 }
 downVotesQuote(id:number){
   const q = this.getQuote(id)
-  if(q){ if(q){
-    q.upvotes += 1;
-  }
-  this.setBestQuote();
+  if(q){ 
     q.downvotes += 1;
   }
+  this.setBestQuote();
+    
+ 
   this.setBestQuote();
 }
 deleteQuote( id:number){
