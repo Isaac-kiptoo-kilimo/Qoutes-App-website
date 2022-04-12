@@ -10,7 +10,7 @@ import { StorageService } from 'src/app/service/storage.service';
 })
 export class AddQuoteComponent implements OnInit {
 
-  quote: Quote= new Quote(1, 'Bill Watterson', 'The greatest glory in living lies not in never falling, but in rising every time we fall.', 'Isaac Kiptoo',0, 0, new Date());
+  quote: Quote= new Quote(1, '', '', '',0, 0, new Date());
   title='npms'
 
   constructor( 
@@ -22,6 +22,10 @@ export class AddQuoteComponent implements OnInit {
   ngOnInit(): void {
   }
   addQuote(){
+    if(this.quote.author==='' || this.quote.quote==='' || this.quote.submited_by===''){
+      alert('Kindly fill all the fields')
+      return
+    }
     this.storageService.addQuote(this.quote);
     this.router.navigateByUrl('/')
   }
